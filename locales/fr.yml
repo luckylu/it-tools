@@ -8,20 +8,20 @@ home:
   toggleMenu: 'Menu'
   home: Accueil
   uiLib: 'UI Lib'
-  buyMeACoffee: 'Soutenez IT-Tools'
+  buyMeACoffee: 'Soutenez Kit For Dev'
   follow:
-    title: 'Vous aimez it-tools ?'
+    title: 'Vous aimez Kit For Dev ?'
     p1: 'Soutenez-nous avec une star sur'
-    githubRepository: "le dépôt GitHub d'IT-Tools"
+    githubRepository: "le dépôt GitHub de Kit For Dev"
     p2: 'ou suivez-nous sur'
-    twitterXAccount: "le compte X d'IT-Tools"
+    twitterXAccount: "le compte X de Kit For Dev"
     thankYou: 'Merci !'
   nav:
     github: 'Dépôt GitHub'
     githubRepository: "Dépôt GitHub d'IT-Tools"
     twitterX: 'Compte X'
     twitterXAccount: "Compte X d'IT-Tools"
-    about: "À propos d'IT-Tools"
+    about: "À propos de Kit For Dev"
     aboutLabel: 'À propos'
     darkMode: 'Mode sombre'
     lightMode: 'Mode clair'

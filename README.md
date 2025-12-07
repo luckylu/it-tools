@@ -5,7 +5,7 @@
 </picture>
 
 <p align="center">
-Useful tools for developer and people working in IT. <a href="https://it-tools.tech">Try it!</a>
+Useful tools for developer and people working in IT. <a href="https://kit4.dev">Try it!</a>
 </p>
 
 
@@ -13,7 +13,7 @@ Useful tools for developer and people working in IT. <a href="https://it-tools.t
 
 <div align="center" markdown="1">
 <p align="center">
-  IT-Tools is proudly sponsored by:
+  Kit For Dev is proudly sponsored by:
 </p>
 
 <a href="https://go.warp.dev/it-tools">
