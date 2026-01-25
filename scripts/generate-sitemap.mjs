@@ -9,7 +9,6 @@ const BASE_URL = 'https://kit4.dev';
 
 const STATIC_ROUTES = [
   '/',
-  '/about',
   '/blog',
 ];
 
