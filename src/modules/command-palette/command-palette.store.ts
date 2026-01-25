@@ -9,7 +9,7 @@ import SunIcon from '~icons/mdi/white-balance-sunny';
 import GithubIcon from '~icons/mdi/github';
 import BugIcon from '~icons/mdi/bug-outline';
 import DiceIcon from '~icons/mdi/dice-5';
-import InfoIcon from '~icons/mdi/information-outline';
+
 
 export const useCommandPaletteStore = defineStore('command-palette', () => {
   const toolStore = useToolStore();
@@ -62,14 +62,7 @@ export const useCommandPaletteStore = defineStore('command-palette', () => {
       keywords: ['report', 'issue', 'bug', 'problem', 'error'],
       icon: BugIcon,
     },
-    {
-      name: 'About',
-      description: 'Learn more about Kit For Dev.',
-      to: '/about',
-      category: 'Pages',
-      keywords: ['about', 'learn', 'more', 'info', 'information'],
-      icon: InfoIcon,
-    },
+
   ];
 
   const { searchResult } = useFuzzySearch({
