@@ -74,10 +74,40 @@ tools:
   password-strength-analyser:
     title: Password strength analyser
     description: Discover the strength of your password with this client-side-only password strength analyser and crack time estimation tool.
+    article: |
+      ## Password Strength
+
+      **Password strength** is a measure of the effectiveness of a password against guessing or brute-force attacks. In its usual form, it estimates how many trials an attacker who does not have direct access to the password would need, on average, to guess it correctly.
+
+      ### Key Factors
+      
+      *   **Length**: The single most important factor. Each added character exponentially increases the search space.
+      *   **Complexity**: Using a mix of uppercase letters, lowercase letters, numbers, and symbols increases the entropy per character.
+      *   **Unpredictability**: Avoiding dictionary words, common substitutions (e.g., `P{'@'}ssw0rd`), and personal information (birthdays).
+
+      ### Entropy
+      
+      Information theory uses **entropy** (measured in bits) to quantify passowrd strength. A password with 60 bits of entropy requires, on average, $2^ {'{'}59{'}'}$ guesses to crack.
+
+      ### Cracking Methods
+      
+      *   **Brute Force**: Trying every possible combination of characters.
+      *   **Dictionary Attack**: Trying words from a pre-arranged list of common passwords.
+      *   **Rainbow Tables**: Using pre-computed hashes to reverse common passwords.
+
 
   chronometer:
     title: Chronometer
     description: Monitor the duration of a thing. Basically a chronometer with simple chronometer features.
+    article: |
+      ## Chronometry
+
+      **Chronometry** is the science of the measurement of time, or timekeeping.
+
+      ### Modern Timekeeping
+      
+      Computers track time using a system clock, often synchronized via **NTP (Network Time Protocol)** to atomic clocks. The basic unit of time in the SI system is the **second**.
+
 
   token-generator:
     title: Token generator
@@ -93,302 +123,1647 @@ tools:
     button:
       copy: Copy
       refresh: Refresh
+    article: |
+      ## Secure Tokens
+
+      A **token** is a piece of data that serves as a proxy for something else, such as identity, permission, or a value. In software, random tokens are widely used for sessions, API keys, and temporary references.
+
+      ### Cryptographically Secure Pseudo-Random Number Generators (CSPRNG)
+      
+      When generating tokens for security purposes (like password resets or session IDs), it is critical to use a **CSPRNG**. Standard random number generators (like `Math.random()` in JavaScript) are deterministic and predictable if the seed is discovered.
+
+      *   **Entropy**: A good token must have high entropy so it cannot be guessed.
+      *   **Uniqueness**: The probability of generating two identical tokens (collision) must be negligible.
+
+      ### Common Uses
+      
+      *   **Session IDs**: Identifying a user across HTTP requests.
+      *   **API Keys**: Authenticating a client application.
+      *   **CSRF Tokens**: Preventing Cross-Site Request Forgery.
+
   percentage-calculator:
     title: Percentage calculator
     description: Easily calculate percentages from a value to another value, or from a percentage to a value.
+    article: |
+      ## Percentage
+
+      A **percentage** is a number or ratio expressed as a fraction of 100. It is often denoted using the percent sign, "%".
+
+      ### Calculation
+      
+      *   **Percentage of a value**: $P \% \times V = (P/100) \times V$.
+      *   **Percentage change**: $((V_{new} - V_{old}) / V_{old}) \times 100$.
+
+      ### Etymology
+      
+      The term comes from Latin *per centum*, meaning "by the hundred".
+
 
   svg-placeholder-generator:
     title: SVG placeholder generator
     description: Generate svg images to use as a placeholder in your applications.
+    article: |
+      ## SVG (Scalable Vector Graphics)
+
+      **SVG** is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation.
+
+      ### Vector vs Raster
+      
+      Unlike raster formats (JPEG, PNG) that store a grid of pixels, SVG defines graphics using **mathematical formulas** (lines, curves, shapes).  
+      This means SVG images can be **scaled indefinitely** without losing quality, making them perfect for logos, icons, and illustrations on the web.
+
+      ### Structure
+      
+      Since it is XML, an SVG file is human-readable and can be edited with a text editor.
+      
+      `<svg width="100" height="100">`  
+      `  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />`  
+      `</svg>`
+
 
   json-to-csv:
     title: JSON to CSV
     description: Convert JSON to CSV with automatic header detection.
+    article: |
+      ## JSON (JavaScript Object Notation)
+
+      **JSON** is a lightweight, text-based, language-independent data interchange format. It was derived from the JavaScript scripting language.
+
+      ## CSV (Comma-Separated Values)
+
+
+      **CSV** is a simple file format used to store tabular data, such as a spreadsheet or database. Files in the CSV format can be imported to and exported from programs that store data in tables, such as Microsoft Excel or OpenOffice Calc.
+
+      ### Format Rules (RFC 4180)
+      
+      *   Each record is located on a separate line, delimited by a line break.
+      *   The last record in the file may or may not have an ending line break.
+      *   Within each record, there may be one or more fields, separated by commas.
+      *   Each field may or may not be enclosed in double quotes.
+
+      ### JSON vs CSV
+      
+      *   **JSON**: Hierarchical, supports nested objects and arrays. Standard for web APIs.
+      *   **CSV**: Flat, tabular. Standard for data science and spreadsheets.
+
 
   camera-recorder:
     title: Camera recorder
     description: Take a picture or record a video from your webcam or camera.
+    article: |
+      ## Digital Video Recording
+
+      Digital video recording allows capturing moving images from a video source (like a webcam) to digital media.
+
+      ### MediaStream API
+      
+      Modern web browsers use the **MediaStream Recording API** (`MediaRecorder`) to capture media streams (audio and video). It allows web apps to record data from the user's camera and microphone without plugins.
+
 
   keycode-info:
     title: Keycode info
     description: Find the javascript keycode, code, location and modifiers of any pressed key.
+    article: |
+      ## JavaScript KeyEvents
+
+      Keyboard events (`KeyboardEvent`) describe a user interaction with the keyboard. Each event describes a single interaction between the user and a key (or a combination of a key with modifier keys) on the keyboard.
+
+      ### Properties
+      
+      *   `key`: The value of the key pressed (e.g., "a", "Enter").
+      *   `code`: The physical key on the keyboard (e.g., "KeyA", "Enter").
+      *   `keyCode`: (Deprecated) A system and implementation dependent numerical code identifyting the unmodified value of the pressed key.
+
 
   emoji-picker:
     title: Emoji picker
     description: Copy and paste emojis easily and get the unicode and code points value of each emoji.
+    article: |
+      ## Emoji
+
+      **Emoji** are ideograms and smileys used in electronic messages and web pages. They exist in various genres, including facial expressions, common objects, places and types of weather, and animals.
+      
+      ### Unicode Standardization
+      
+      Emojis are standardized by the **Unicode Consortium**. Each emoji is represented by a unique code point (e.g., U+1F600 for 😀).
+
 
   color-converter:
     title: Color converter
     description: Convert color between the different formats (hex, rgb, hsl and css name)
+    article: |
+      ## Color Models
+
+      A **color model** is an abstract mathematical model describing the way colors can be represented as tuples of numbers.
+
+      ### Common Models in Web
+      
+      *   **RGB (Red, Green, Blue)**: An additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors.
+          *   Example: `rgb(255, 0, 0)` is Red.
+      *   **HEX (Hexadecimal)**: A byte-based representation of RGB values.
+          *   Example: `#FF0000` is Red.
+      *   **HSL (Hue, Saturation, Lightness)**: Designed to be more intuitive for humans.
+          *   **Hue**: The color type (0-360 degrees).
+          *   **Saturation**: Intensity (0-100%).
+          *   **Lightness**: Brightness (0-100%).
+
 
   bcrypt:
     title: Bcrypt
     description: Hash and compare text string using bcrypt. Bcrypt is a password-hashing function based on the Blowfish cipher.
+    article: |
+      ## Bcrypt
+
+      **bcrypt** is a password-hashing function designed by Niels Provos and David Mazières in 1999, presented at USENIX. It is based on the Blowfish cipher and specifically designed to be slow, making it resistant to brute-force attacks.
+
+      ### Key Features
+
+      *   **Adaptive Work Factor**: The "cost" factor (work factor) can be increased over time as computing power increases. This makes bcrypt future-proof.
+      *   **Salting**: Bcrypt automatically handles salting. A salt is random data added to the password before hashing to ensure that identical passwords do not have the same hash.
+      *   **Slow by Design**: Unlike fast hash functions (MD5, SHA-256) used for file integrity, bcrypt is computationally expensive, slowing down attackers trying to guess passwords.
+      
+      ### Structure of a Bcrypt Hash
+      
+      A standard bcrypt hash looks like this: `$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy`
+      
+      *   `$2a$`: The version identifier.
+      *   `10`: The cost parameter ($2^ {'{'}10{'}'}$ iterations).
+      *   `N9qo8uLOickgx2ZMRZoMye`: The 128-bit salt (encoded).
+      *   `IjZAgcfl7p92ldGxad68LJZdL17lhWy`: The 184-bit hash (encoded).
+
 
   crontab-generator:
     title: Crontab generator
     description: Validate and generate crontab and get the human-readable description of the cron schedule.
+    article: |
+      ## Cron (Unix)
+
+      **Cron** is a time-based job scheduler in Unix-like computer operating systems. Users that set up and maintain software environments use cron to schedule jobs (commands or shell scripts) to run periodically at fixed times, dates, or intervals.
+
+      ### Syntax
+      
+      A crontab file consists of lines of six fields:
+      
+      `* * * * * command to execute`
+      
+      1.  **Minute** (0–59)
+      2.  **Hour** (0–23)
+      3.  **Day of Month** (1–31)
+      4.  **Month** (1–12)
+      5.  **Day of Week** (0–7, where 0 and 7 are Sunday)
+
+      ### Examples
+      
+      *   `0 0 * * *`: Run once a day at midnight.
+      *   `*/5 * * * *`: Run every 5 minutes.
+
 
   http-status-codes:
     title: HTTP status codes
     description: The list of all HTTP status codes, their name, and their meaning.
+    article: |
+      ## HTTP Status Codes
+
+      Hypertext Transfer Protocol (HTTP) response status codes indicate whether a specific HTTP request has been successfully completed.
+
+      ### Classes
+      
+      *   **1xx (Informational)**: The request was received, continuing process.
+      *   **2xx (Successful)**: The request was successfully received, understood, and accepted. (e.g., `200 OK`, `201 Created`).
+      *   **3xx (Redirection)**: Further action needs to be taken in order to complete the request. (e.g., `301 Moved Permanently`, `302 Found`).
+      *   **4xx (Client Error)**: The request contains bad syntax or cannot be fulfilled. (e.g., `400 Bad Request`, `401 Unauthorized`, `404 Not Found`).
+      *   **5xx (Server Error)**: The server failed to fulfill an apparently valid request. (e.g., `500 Internal Server Error`, `503 Service Unavailable`).
+
 
   sql-prettify:
     title: SQL prettify and format
     description: Format and prettify your SQL queries online (it supports various SQL dialects).
+    article: |
+      ## SQL (Structured Query Language)
+
+      **SQL** is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS).
+
+      ### Key Components
+      
+      *   **DQL (Data Query Language)**: `SELECT`.
+      *   **DML (Data Manipulation Language)**: `INSERT`, `UPDATE`, `DELETE`.
+      *   **DDL (Data Definition Language)**: `CREATE`, `ALTER`, `DROP`.
+      *   **DCL (Data Control Language)**: `GRANT`, `REVOKE`.
+
 
   benchmark-builder:
     title: Benchmark builder
     description: Easily compare execution time of tasks with this very simple online benchmark builder.
+    article: |
+      ## Benchmarking
+
+      **Benchmarking** is the practice of comparing business processes and performance metrics to industry bests and best practices from other companies. In computing, it is the act of running a computer program, a set of programs, or other operations, in order to assess the relative performance of an object, normally by running a number of standard tests and trials against it.
+
 
   git-memo:
     title: Git cheatsheet
     description: Git is a decentralized version management software. With this cheatsheet, you will have quick access to the most common git commands.
+    article: |
+      ## Git Version Control
+
+      **Git** is a distributed version-control system for tracking changes in source code during software development. It was created by Linus Torvalds in 2005 for development of the Linux kernel.
+
+      ### Key Concepts
+      
+      *   **Repository (Repo)**: The data structure where Git stores the application’s history.
+      *   **Commit**: A snapshot of the file revisions at a specific time.
+      *   **Branch**: A lightweight movable pointer to a commit.
+      *   **Merge**: Joining two or more development histories together.
+
+      ### Common Commands
+      
+      *   `git init`: Initialize a new repository.
+      *   `git clone`: Copy a remote repository.
+      *   `git add`: Stage changes for the next commit.
+      *   `git commit`: Save the staged changes.
+      *   `git push`: Upload local branch commits to the remote.
+
 
   slugify-string:
     title: Slugify string
     description: Make a string url, filename and id safe.
+    article: |
+      ## Database Slugs
+
+      A **slug** is the part of a URL which identifies a particular page on a website in a form readable by users.
+
+      ### Characteristics
+      
+      *   **Readable**: `my-cool-blog-post` vs `?id=123`.
+      *   **SEO Friendly**: Search engines prioritize keywords in the URL.
+      *   **Safe**: Strips special characters, accents, and spaces that would require encoding.
+
 
   encryption:
     title: Encrypt / decrypt text
     description: Encrypt clear text and decrypt ciphertext using crypto algorithms like AES, TripleDES, Rabbit or RC4.
+    article: |
+      ## Encryption Algorithms
+
+      Encryption is the process of encoding information so that only authorized parties can access it.
+
+      ### Symmetric vs. Asymmetric
+      
+      *   **Symmetric-key encryption** (e.g., AES, DES): Uses the **same key** for both encryption and decryption. It is fast and efficient for large amounts of data but requires secure key exchange.
+      *   **Asymmetric-key encryption** (e.g., RSA): Uses a **pair of keys** (public and private). Data encrypted with the public key can only be decrypted with the private key.
+
+      ### Common Algorithms
+      
+      *   **AES (Advanced Encryption Standard)**: The global standard for sensitive data. It is a symmetric block cipher established by NIST in 2001.
+      *   **DES / TripleDES**: Older standards, now considered insecure or deprecated due to short key lengths.
+      *   **Rabbit**: A high-speed stream cipher.
+      *   **RC4**: A stream cipher formerly widely used (in WEP/WPA) but now insecure and prohibited in TLS.
+
 
   random-port-generator:
     title: Random port generator
     description: Generate random port numbers outside of the range of "known" ports (0-1023).
+    article: |
+      ## Network Ports
+
+      A **port** is a virtual point where network connections start and end. Ports are software-based and managed by a computer's operating system.
+
+      ### Port Ranges (IANA)
+      
+      *   **Well-known ports** (0–1023): Reserved for system services (HTTP=80, SSH=22).
+      *   **Registered ports** (1024–49151): Used by user processes or applications.
+      *   **Dynamic/Private ports** (49152–65535): Used for ephemeral connections.
+
 
   yaml-prettify:
     title: YAML prettify and format
     description: Prettify your YAML string into a friendly, human-readable format.
+    article: |
+      ## YAML (YAML Ain't Markup Language)
+
+      **YAML** is a human-readable data serialization standard that can be used in conjunction with all programming languages and is often used to write configuration files.
+
+      ### Features
+      
+      *   **Minimal Syntax**: Relies on indentation (whitespace) for structure, avoiding brackets and tags.
+      *   **Scalar Types**: Strings, numbers, booleans.
+      *   **Collections**: Lists (sequences) and dictionaries (mappings).
+
+      ### Example
+      
+      `title: YAML Example`  
+      `date: 2023-01-01`  
+      `items:`  
+      `  - part_no: A4786`  
+      `    desc: Water Bucket`  
+      `    price: 1.47`
+
 
   eta-calculator:
     title: ETA calculator
     description: An ETA (Estimated Time of Arrival) calculator to determine the approximate end time of a task, for example, the end time and duration of a file download.
+    article: |
+      ## Estimating Time of Arrival (ETA)
+
+      **ETA** is a term used in computing and logistics to predict when a task or vehicle will arrive at a certain destination.
+
+      ### Calculation
+      
+      The basic formula for calculating ETA is:
+      
+      `Time Remaining = (Total Size - Processed Size) / Current Speed`
+      
+      `ETA = Current Time + Time Remaining`
+
+      ### Factors
+      
+      In file transfers, the speed is rarely constant due to network congestion, leading to fluctuating ETAs (the "jumping progress bar" effect).
+
 
   roman-numeral-converter:
     title: Roman numeral converter
     description: Convert Roman numerals to numbers and convert numbers to Roman numerals.
+    article: |
+      ## Roman Numerals
+
+      **Roman numerals** are a numeral system that originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages.
+
+      ### Symbols
+      
+      *   **I**: 1
+      *   **V**: 5
+      *   **X**: 10
+      *   **L**: 50
+      *   **C**: 100
+      *   **D**: 500
+      *   **M**: 1000
+
+      ### Rules
+      
+      *   Symbols are placed from left to right in order of value, starting with the largest.
+      *   However, in a few specific cases, to avoid four characters being repeated in succession (such as IIII or XXXX), subtractive notation is used (IV for 4, IX for 9).
+
 
   hmac-generator:
     title: Hmac generator
     description: Computes a hash-based message authentication code (HMAC) using a secret key and your favorite hashing function.
+    article: |
+      ## HMAC (Hash-based Message Authentication Code)
+
+      **HMAC** is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. It allows verifying both the **data integrity** and the **authenticity** of a message.
+
+      ### How it Works
+      
+      HMAC uses a hash function (like SHA-256 or MD5) twice, in a nested structure:
+      
+      `HMAC(K, m) = H((K' ⊕ opad) {'|'}{'|'} H((K' ⊕ ipad) {'|'}{'|'} m))`
+      
+      *   `H`: Hash function (e.g., SHA-256).
+      *   `K`: Secret key.
+      *   `m`: Message.
+      *   `ipad`: Inner padding.
+      *   `opad`: Outer padding.
+
+      ### Use Cases
+      
+      *   **API Authentication**: Verifying that a request came from a trusted client without sending the password.
+      *   **Data Integrity**: Ensuring that data stored in a cookie (like a session signature) hasn't been tampered with by the client.
+
 
   bip39-generator:
     title: BIP39 passphrase generator
     description: Generate a BIP39 passphrase from an existing or random mnemonic, or get the mnemonic from the passphrase.
+    article: |
+      ## BIP39: Mnemonic Code for Generating Deterministic Keys
+
+      **BIP39** (Bitcoin Improvement Proposal 39) describes the implementation of a mnemonic code or mnemonic sentence -- a group of easy to remember words -- for the generation of deterministic wallets.
+
+      ### Usage
+      
+      It consists of two parts: generating the mnemonic and converting it into a binary seed. This seed can be later used to generate deterministic wallets using BIP-0032.
+
+      ### Wordlist
+      
+      The Mnemonic uses a specific wordlist with 2048 words. The list is carefully created to ensure that:
+      
+      *   Smart selection of word prevents mistakes (e.g. similar words are avoided).
+      *   The words are usually 3-8 letters long.
+      *   The wordlist is available in multiple languages.
+
 
   base64-file-converter:
     title: Base64 file converter
     description: Convert a string, file, or image into its base64 representation.
+    article: |
+      ## Base64 for Files
+
+      Base64 is strictly a text-based format. However, it is widely used to represent **binary files** (like images, PDFs, or audio) in text-only systems like HTML or JSON.
+
+      ### Data URLs
+      
+      In web development, Base64 is often used in **Data URLs** to embed small files directly inline.
+      
+      `data:[<mediatype>][;base64],<data>`
+      
+      Example of an embedded small red dot:
+      `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" />`
+
+      ### Overhead
+      
+      Base64 encoding increases the file size by approximately **33%** compared to the original binary.
+
 
   list-converter:
     title: List converter
     description: This tool can process column-based data and apply various changes (transpose, add prefix and suffix, reverse list, sort list, lowercase values, truncate values) to each row.
+    article: |
+      ## List Processing
+
+      List processing involves manipulating a collection of items (strings, numbers) to transform them into a desired format.
+
+      ### Common Operations
+      
+      *   **Sorting**: Ordering items alphabetically or numerically.
+      *   **Filtering**: Removing items that do not meet criteria.
+      *   **Mapping**: Transforming each item (e.g., uppercase).
+      *   **Reducing**: Combining items into a single value (e.g., sum).
+
 
   base64-string-converter:
     title: Base64 string encoder/decoder
     description: Simply encode and decode strings into their base64 representation.
+    article: |
+      ## What is Base64?
+
+      **Base64** is a binary-to-text encoding scheme that represents binary data in an ASCII string format by translating it into a radix-64 representation. The term Base64 originates from a specific MIME content transfer encoding. Each Base64 digit represents exactly 6 bits of data.
+
+      ### Design and Technical Details
+
+      The particular set of 64 characters chosen to represent the 64 place-values for the base varies between implementations. The general strategy is to choose 64 characters that are common to most encodings and printable. This combination leaves the data unlikely to be modified in transit through information systems, such as email, that were traditionally not 8-bit clean.
+      
+      The Base64 alphabet typically consists of:
+
+      *   `A`–`Z` (indices 0–25)
+      *   `a`–`z` (indices 26–51)
+      *   `0`–`9` (indices 52–61)
+      *   `+` and `/` (indices 62 and 63)
+
+      ### Encoding Process
+
+      Base64 encoding takes three bytes (24 bits) of binary data and splits them into four 6-bit chunks. Each 6-bit value is then mapped to a character in the Base64 alphabet.
+      
+      If the length of the original data is not a multiple of three, padding characters (`=`) are added to the end of the input to make it reach a multiple of three bytes.
+
+      *   One `=` indicates that 2 zero bits were added (1 byte of padding).
+      *   Two `=` indicate that 4 zero bits were added (2 bytes of padding).
+      
+      ### History
+
+      Base64 encoding has its roots in the need to transmit binary data over systems designed only for text.
+
+      *   **RFC 989 (1987)**: First defined Base64 as part of Privacy Enhanced Mail (PEM).
+      *   **RFC 1341 (1992)**: Standardized Base64 for MIME (Multipurpose Internet Mail Extensions), enabling email attachments like images and documents.
+      *   **RFC 4648 (2006)**: The current standard that unifies Base64 specifications.
+
+      ### Common Variants
+
+      **Base64url**: A "URL and Filename Safe" variant where `+` and `/` are replaced by `-` and `_` respectively. This allows Base64 strings to be used in URLs and filenames without requiring percent-encoding.
 
   toml-to-yaml:
     title: TOML to YAML
     description: Parse and convert TOML to YAML.
 
+    article: |
+      ## TOML (Tom's Obvious, Minimal Language)
+
+      **TOML** is a file format for configuration files. It is intended to be easy to read and write due to obvious semantics which aim to be "minimal". TOML is designed to map unambiguously to a hash table.
+
+      ### Syntax
+      
+      TOML is case-sensitive. It strictly defines structure using `key = value` pairs and `[sections]`.
+      
+      `title = "TOML Example"`
+      
+      `[owner]`  
+      `name = "Tom Preston-Werner"`  
+      `dob = 1979-05-27T07:32:00-08:00`
+
+
   math-evaluator:
     title: Math evaluator
     description: A calculator for evaluating mathematical expressions. You can use functions like sqrt, cos, sin, abs, etc.
+    article: |
+      ## Mathematical Expression Evaluation
+
+      Evaluating mathematical expressions in software involves parsing a string (infix notation) and computing its value.
+
+      ### Operator Precedence (PEMDAS/BODMAS)
+      
+      To evaluate `3 + 4 * 2` correctly (which is 11, not 14), parsers follow standard order of operations:
+      
+      1.  **P**arentheses `()`
+      2.  **E**xponents `^`
+      3.  **M**ultiplication `*` and **D**ivision `/`
+      4.  **A**ddition `+` and **S**ubtraction `-`
+
 
   json-to-yaml-converter:
     title: JSON to YAML converter
     description: Simply convert JSON to YAML with this online live converter.
+    article: |
+      ## JSON (JavaScript Object Notation)
+
+      **JSON** is a lightweight, text-based, language-independent data interchange format.
+
+      ## JSON vs YAML
+
+
+      Both JSON and YAML are popular data serialization formats, but they serve slightly different purposes.
+
+      ### Comparison
+      
+      *   **Readability**: YAML is generally considered more human-readable due to its lack of brackets and quotes.
+      *   **Comments**: YAML supports comments (`#`), whereas standard JSON does not.
+      *   **Parsing Speed**: JSON parsers are typically faster and safer (JavaScript `JSON.parse` is native).
+      *   **Complexity**: YAML supports complex features like anchors and aliases, while JSON is strictly a tree.
+
 
   url-parser:
     title: URL parser
     description: Parse a URL into its separate constituent parts (protocol, origin, params, port, username-password, ...)
+    article: |
+      ## URL (Uniform Resource Locator)
+
+      A **URL** is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it.
+
+      ### Syntax
+      
+      A generic URI looks like this:
+      
+      `scheme:[//authority]path[?query][#fragment]`
+      
+      *   **Scheme**: `https`, `ftp`, `mailto`...
+      *   **Authority**: `user:password{'@'}example.com:8080` (userinfo, host, port).
+      *   **Path**: `/path/to/resource`.
+      *   **Query**: `?search=test&page=2`.
+      *   **Fragment**: `#section-header` (client-side anchor).
+
 
   iban-validator-and-parser:
     title: IBAN validator and parser
     description: Validate and parse IBAN numbers. Check if an IBAN is valid and get the country, BBAN, if it is a QR-IBAN and the IBAN friendly format.
+    article: |
+      ## IBAN (International Bank Account Number)
+
+      The **IBAN** is an internationally agreed system of identifying bank accounts across national borders to facilitate the communication and processing of cross-border transactions with a reduced risk of transcription errors.
+
+      ### Structure (ISO 13616)
+      
+      An IBAN consists of up to 34 alphanumeric characters:
+      
+      *   **Country Code**: 2 letters (ISO 3166-1 alpha-2), e.g., `DE` for Germany.
+      *   **Check Digits**: 2 digits, calculated via `mod-97`.
+      *   **BBAN**: Basic Bank Account Number. Contains the bank identifier and account number. The format varies by country.
+
+      ### Validation
+      
+      1.  Check that the total length is correct as per the country standard.
+      2.  Move the first four characters to the end.
+      3.  Replace letters with digits ($A=10, B=11, \dots, Z=35$).
+      4.  Compute the remainder of the number divided by 97. If it is 1, the IBAN is valid.
+
 
   user-agent-parser:
     title: User-agent parser
     description: Detect and parse Browser, Engine, OS, CPU, and Device type/model from an user-agent string.
+    article: |
+      ## User-Agent
+
+      The **User-Agent** request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and / or version of the requesting user agent.
+
+      ### Format Issues
+      
+      Historically, the format was strict, but browser wars led to a mess where almost every browser claims to be "Mozilla/5.0" to ensure compatibility with archaic servers.
+
+      ### Example
+      
+      `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36`
+
 
   numeronym-generator:
     title: Numeronym generator
     description: A numeronym is a word where a number is used to form an abbreviation. For example, "i18n" is a numeronym of "internationalization" where 18 stands for the number of letters between the first i and the last n in the word.
+    article: |
+      ## Numeronyms
+
+      A **numeronym** is a word where a number is used to form an abbreviation.
+
+      ### Famous Examples
+      
+      *   **i18n**: Internationalization (starts with I, ends with N, 18 letters in between).
+      *   **L10n**: Localization.
+      *   **a11y**: Accessibility.
+      *   **K8s**: Kubernetes.
+      *   **P13n**: Personalization.
+
 
   case-converter:
     title: Case converter
     description: Transform the case of a string and choose between different formats
+    article: |
+      ## Naming Conventions (Case)
+
+      In programming, naming conventions are rules for naming identifiers to denote their type and usage.
+
+      ### Common Styles
+      
+      *   **PascalCase**: `MyClassName`. (Classes in C#, Java).
+      *   **camelCase**: `myVariableName`. (Variables in Java, JS).
+      *   **snake_case**: `my_variable_name`. (Python, Rust).
+      *   **kebab-case**: `my-css-class`. (CSS classes, URL slugs).
+      *   **SCREAMING_SNAKE_CASE**: `MY_CONSTANT`. (Constants).
+
 
   html-entities:
     title: Escape HTML entities
     description: Escape or unescape HTML entities (replace characters like <,>, &, " and \' with their HTML version)
+    article: |
+      ## HTML Entities
+
+      **HTML entities** are a way of representing characters in HTML. They are used to display reserved characters (which would otherwise be interpreted as code) or invisible characters.
+
+      ### Reserved Characters
+      
+      *   `<` (Less than): `&lt;`
+      *   `>` (Greater than): `&gt;`
+      *   `&` (Ampersand): `&amp;`
+      *   `"` (Double quote): `&quot;`
+
+      ### Unicode Entities
+      
+      You can also use numeric references: `&#60;` for `<`.
+
 
   json-prettify:
     title: JSON prettify and format
     description: Prettify your JSON string into a friendly, human-readable format.
+    article: |
+      ## JSON (JavaScript Object Notation)
+
+      **JSON** is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language Standard ECMA-262 3rd Edition - December 1999.
+
+      ### Syntax
+      
+      *   Data is in name/value pairs.
+      *   Data is separated by commas.
+      *   Curly braces hold objects.
+      *   Square brackets hold arrays.
+
+      ### Data Types
+      
+      *   **Number**: Verified decimal format.
+      *   **String**: Double-quoted Unicode.
+      *   **Boolean**: `true` or `false`.
+      *   **Array**: Ordered list of values.
+      *   **Object**: Unordered collection of key/value pairs.
+      *   `null`: Empty value.
+
 
   docker-run-to-docker-compose-converter:
     title: Docker run to Docker compose converter
     description: Transforms "docker run" commands into docker-compose files!
+    article: |
+      ## Docker & Docker Compose
+
+      **Docker** is a platform for developing, shipping, and running applications in containers.
+
+      ### Docker Run
+      
+      `docker run` is the command to create and start a container. It can get very long with complex configurations:
+      
+      `docker run -d -p 80:80 --name webserver nginx`
+
+      ### Docker Compose
+      
+      **Docker Compose** is a tool for defining and running multi-container Docker applications. It uses a YAML file (`docker-compose.yml`) to configure the application's services.
+      
+      This allows you to verify your configuration into version control and run it with a simple `docker-compose up`.
+
 
   mac-address-lookup:
     title: MAC address lookup
     description: Find the vendor and manufacturer of a device by its MAC address.
+    article: |
+      ## MAC Address (Media Access Control)
+
+      A **MAC address** is a unique identifier assigned to a network interface controller (NIC) for use as a network address in communications within a network segment.
+
+      ### OUI (Organizationally Unique Identifier)
+      
+      The first 24 bits (3 bytes) of a MAC address identify the manufacturer (vendor). This is called the OUI and is assigned by the IEEE.
+      
+      *   Example MAC: `00:1A:2B:3C:4D:5E`
+      *   OUI: `00:1A:2B` (identifies the vendor)
+      *   NIC Specific: `3C:4D:5E` (assigned by the vendor)
+      
+      This allows network administrators to identify the hardware manufacturer of a device just by looking at its MAC address.
+
 
   mime-types:
     title: MIME types
     description: Convert MIME types to file extensions and vice-versa.
+    article: |
+      ## MIME Types (Media Types)
+
+      A **media type** (also known as a **Multipurpose Internet Mail Extensions or MIME type**) is a standard that indicates the nature and format of a document, file, or assortment of bytes.
+
+      ### Structure
+      
+      A MIME type consists of a **type** and a **subtype**, separated by a slash `/`.
+      
+      `type/subtype`
+      
+      *   **type**: The general category (e.g., `text`, `image`, `application`).
+      *   **subtype**: The specific format (e.g., `html`, `png`, `json`).
+
+      ### Common Examples
+      
+      *   `text/html`: HTML documents.
+      *   `application/json`: JSON data.
+      *   `image/jpeg`: JPEG images.
+      *   `multipart/form-data`: Used in web forms.
+
 
   toml-to-json:
     title: TOML to JSON
     description: Parse and convert TOML to JSON.
+    article: |
+      ## TOML vs JSON
+
+      ### Purpose
+      
+      *   **TOML**: Designed primarily for **configuration files** (like `Cargo.toml` in Rust or `pyproject.toml` in Python).
+      *   **JSON**: Designed primarily for **data interchange** between web APIs and clients.
+
+      ### Syntax Differences
+      
+      TOML uses a line-based syntax that is easy to merge (git-friendly), while JSON is block-based.
+
 
   lorem-ipsum-generator:
     title: Lorem ipsum generator
     description: Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content
+    article: |
+      ## Lorem Ipsum
+
+      **Lorem ipsum** is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+
+      ### Origin
+      
+      It is derived from a scrambled section of "De finibus bonorum et malorum", a 1st-century BC Latin text by Cicero. The words are altered, added, and removed to make it nonsensical and improper Latin.
+
+      ### Purpose
+      
+      The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English.
+
 
   qrcode-generator:
     title: QR Code generator
     description: Generate and download a QR code for a URL (or just plain text), and customize the background and foreground colors.
+    article: |
+      ## QR Code (Quick Response Code)
+
+      A **QR code** is a type of matrix barcode (or two-dimensional barcode) invented in 1994 by the Japanese automotive company Denso Wave.
+
+      ### How it works
+      
+      A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.
+      
+      ### Error Correction
+      
+      QR codes include Reed–Solomon error correction, which allows the code to be scanned even if part of it is damaged or obscured.
+      
+      *   **Level L**: 7% restoration.
+      *   **Level M**: 15% restoration.
+      *   **Level Q**: 25% restoration.
+      *   **Level H**: 30% restoration.
+
 
   wifi-qrcode-generator:
     title: WiFi QR Code generator
     description: Generate and download QR codes for quick connections to WiFi networks.
+    article: |
+      ## WiFi QR Codes
+
+      WiFi QR Codes allow smartphones to connect to a wireless network without typing the password manually. They are supported natively by iOS (Camera app) and Android.
+
+      ### Format (Mecard-like)
+      
+      The string encoded in the QR code follows a specific format:
+      
+      `WIFI:T:WPA;S:MyNetworkName;P:MyPassword;;`
+      
+      *   `T`: Authentication type (WPA, WEP, or nopass).
+      *   `S`: SSID (Network Name).
+      *   `P`: Password.
+      *   `H`: Hidden (true/false) - Optional.
+
 
   xml-formatter:
     title: XML formatter
     description: Prettify your XML string into a friendly, human-readable format.
+    article: |
+      ## XML (Extensible Markup Language)
+
+      **XML** is a markup language and file format for storing, transmitting, and reconstructing arbitrary data. It defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
+
+      ### Key Goals
+      
+      *   **Simplicity**: XML should be straightforward to use over the Internet.
+      *   **Generality**: XML should support a wide variety of applications.
+      *   **Usability**: XML documents should be human-legible and reasonably clear.
+
+      ### Syntax
+      
+      XML consists of elements defined by tags.
+      
+      `<note>`  
+      `  <to>Tove</to>`  
+      `  <from>Jani</from>`  
+      `  <heading>Reminder</heading>`  
+      `  <body>Don't forget me this weekend!</body>`  
+      `</note>`
+
 
   temperature-converter:
     title: Temperature converter
     description: Degrees temperature conversions for Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur, and Rømer.
+    article: |
+      ## Temperature Scales
+
+      Temperature is a direct measurement of the thermal energy of a system.
+
+      ### Scales
+      
+      *   **Celsius (°C)**: Based on the freezing (0°C) and boiling (100°C) points of water at 1 atm.
+      *   **Fahrenheit (°F)**: Used primarily in the US. Water freezes at 32°F and boils at 212°F.
+      *   **Kelvin (K)**: The base unit of temperature in the SI. 0 K is **absolute zero** (no thermal energy).
+          *   `0 K = -273.15 °C`
+
 
   chmod-calculator:
     title: Chmod calculator
     description: Compute your chmod permissions and commands with this online chmod calculator.
+    article: |
+      ## Chmod (Change Mode)
+
+      **chmod** is a Unix command used to change the access permissions of file system objects (files and directories).
+
+      ### Numeric Notation (Octal)
+      
+      Permissions are represented by a 3-digit number (e.g., `755`), where each digit represents a user class: **Owner**, **Group**, and **Others**.
+      
+      Each digit is the sum of:
+
+      *   **4**: Read (`r`)
+      *   **2**: Write (`w`)
+      *   **1**: Execute (`x`)
+
+      ### Examples
+      
+      *   `777` (rwx rwx rwx): Everyone can read, write, and execute (Dangerous!).
+      *   `755` (rwx r-x r-x): Owner has full access; others can only read and execute.
+      *   **644** (rw- r-- r--): Owner can read/write; others can only read.
+
 
   rsa-key-pair-generator:
     title: RSA key pair generator
     description: Generate a new random RSA private and public pem certificate key pair.
+    article: |
+      ## RSA (Rivest–Shamir–Adleman)
+
+      **RSA** is one of the first public-key cryptosystems and is widely used for secure data transmission. It was described in 1977.
+
+      ### Asymmetric Cryptography
+      
+      RSA relies on the practical difficulty of factoring the product of two large prime numbers ("factoring problem").
+      
+      *   **Public Key**: Can be shared openly. Used to **encrypt** messages or **verify** signatures.
+      *   **Private Key**: Must be kept secret. Used to **decrypt** messages or **create** signatures.
+
+      ### Key Generation
+      
+      1.  Choose two distinct prime numbers, $p$ and $q$.
+      2.  Compute $n = pq$. $n$ is used as the modulus for both keys.
+      3.  Compute Euler's totient function $\phi(n) = (p-1)(q-1)$.
+      4.  Choose an integer $e$ such that $1 < e < \phi(n)$ and $e$ is coprime (gcd is 1).
+      5.  Determine $d$ as $d \equiv e^ {'{'}-1{'}'} \pmod {'{'}\phi(n){'}'}$.
+
+      The **Public Key** is $(n, e)$ and the **Private Key** is $(d, n)$.
+
 
   html-wysiwyg-editor:
     title: HTML WYSIWYG editor
     description: Online, feature-rich WYSIWYG HTML editor which generates the source code of the content immediately.
+    article: |
+      ## WYSIWYG (What You See Is What You Get)
+
+      **WYSIWYG** is a system in which editing software allows content to be edited in a form that resembles its appearance when printed or displayed as a finished product.
+
+      ### ContentEditable
+      
+      In the web, WYSIWYG editors often leverage the `contenteditable` attribute in HTML, which allows users to edit the content of an element directly in the browser.
+
 
   yaml-to-toml:
     title: YAML to TOML
     description: Parse and convert YAML to TOML.
+    article: |
+      ## YAML vs TOML
+
+      ### Ambiguity
+      
+      **YAML** is extremely flexible but can be ambiguous (e.g., is `NO` a boolean false or the country Norway?).
+      
+      **TOML** aims to be minimal and unambiguous. It avoids the complexity of YAML while being more readable than JSON.
+
 
   mac-address-generator:
     title: MAC address generator
     description: Enter the quantity and prefix. MAC addresses will be generated in your chosen case (uppercase or lowercase)
+    article: |
+      ## MAC Address Generation
+
+      When simulating networks or securing privacy (MAC randomization), generating random MAC addresses is useful.
+
+      ### Locally Administered Addresses
+      
+      To generate a valid "private" MAC address that won't conflict with official OUIs, you should set the **U/L bit** (Universal/Local) to 1. This corresponds to the second least significant bit of the first byte.
+      
+      Examples of locally administered first bytes:
+
+      *   `x2`, `x6`, `xA`, `xE`
+      *   e.g., `02:xx:xx:xx:xx:xx`
+
 
   json-diff:
     title: JSON diff
     description: Compare two JSON objects and get the differences between them.
+    article: |
+      ## JSON Diff (Structural Comparison)
+
+      Comparing two JSON objects is not as simple as comparing string equality, because the **order of keys** in a JSON object is not guaranteed to be significant (though arrays are ordered).
+
+      ### Diffing Strategies
+      
+      *   **Deep Equality**: Recursively traversing both objects to ensure every key and value matches.
+      *   **Semantic Diff**: Identifying additions, deletions, and modifications of values between version A and version B.
+
 
   jwt-parser:
     title: JWT parser
     description: Parse and decode your JSON Web Token (jwt) and display its content.
+    article: |
+      ## What is JWT (JSON Web Token)?
+
+      **JSON Web Token (JWT)** (pronounced /dʒɒt/) is an open industry standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed.
+
+      ### Structure
+
+      A JWT is composed of three parts separated by dots (`.`), which are:
+
+      1.  **Header**
+      2.  **Payload**
+      3.  **Signature**
+
+      Therefore, a JWT typically looks like this: `xxxxx.yyyyy.zzzzz`
+
+      #### 1. Header
+      The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
+      
+      For example, a header might specify `HS256` as the algorithm and `JWT` as the type.
+
+      #### 2. Payload
+      The payload contains the **claims**. Claims are statements about an entity (typically, the user) and additional data. Claims are categorized into three types:
+
+      *   **Registered Claims**: Predefined claims that are not mandatory but recommended, such as `iss` (issuer), `exp` (expiration time), `sub` (subject), and `aud` (audience).
+      *   **Public Claims**: These can be defined at will by those using JWTs.
+      *   **Private Claims**: Custom claims created to share information between parties that agree on using them.
+
+      #### 3. Signature
+      To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+      
+      The signature is used to verify the message wasn't changed along the way, and, in the case of tokens signed with a private key, it can also verify that the sender of the JWT is who it says it is.
+
+      ### Usage
+
+      **Authorization** is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
 
   date-converter:
     title: Date-time converter
     description: Convert date and time into the various different formats
+    article: |
+      ## ISO 8601 and Time Formats
+
+      **ISO 8601** is the international standard for the representation of dates and times. It removes ambiguity between country-specific formats (MM/DD/YYYY vs DD/MM/YYYY).
+
+      ### The Format
+      
+      `YYYY-MM-DDTHH:mm:ss.sssZ`
+      
+      *   **T**: Separator between date and time.
+      *   **Z**: "Zulu" time (UTC).
+
+      ### Unix Timestamp
+      
+      The **Unix time** (or Epoch time) is the number of seconds that have elapsed since **January 1, 1970 (UTC)**. It is widely used in systems because it is a simple integer.
+
 
   phone-parser-and-formatter:
     title: Phone parser and formatter
     description: Parse, validate and format phone numbers. Get information about the phone number, like the country code, type, etc.
+    article: |
+      ## E.164 Standard
+
+      **E.164** is an international standard (ITU-T recommendation) that defines a numbering plan for the world-wide public switched telephone network (PSTN) and some other data networks.
+
+      ### Structure
+      
+      An E.164 number can have a maximum of 15 digits and is usually written as:
+      `[+] [country code] [subscriber number including area code]`
+
 
   ipv4-subnet-calculator:
     title: IPv4 subnet calculator
     description: Parse your IPv4 CIDR blocks and get all the info you need about your subnet.
+    article: |
+      ## CIDR (Classless Inter-Domain Routing)
+
+      **CIDR** is a method for allocating IP addresses and for IP routing. It replaced the previous classful network design (Class A, B, C) in 1993.
+
+      ### Notation
+      
+      CIDR notation consists of an IP address, a slash, and a number representing the count of leading 1-bits in the subnet mask.
+      
+      `192.168.1.0/24`
+      
+      *   **IP Address**: `192.168.1.0`
+      *   **Prefix Length**: `/24` (255.255.255.0)
+
+      ### Subnetting
+      
+      Subnetting is the practice of dividing a network into two or more smaller networks. It helps valid addressing, efficient routing, and security.
+
 
   og-meta-generator:
     title: Open graph meta generator
     description: Generate open-graph and socials HTML meta tags for your website.
+    article: |
+      ## Open Graph Protocol
+
+      The **Open Graph protocol** enables any web page to become a rich object in a social graph. It is used by Facebook, LinkedIn, Pinterest, and many others to display rich previews when a link is shared.
+
+      ### Basic Metadata
+      
+      To turn your web page into graph objects, you need to add basic metadata to your page.
+      
+      *   `og:title`: The title of your object as it should appear within the graph.
+      *   `og:type`: The type of your object, e.g., `video.movie`.
+      *   `og:image`: An image URL which should represent your object within the graph.
+      *   `og:url`: The canonical URL of your object that will be used as its permanent ID.
+
 
   ipv6-ula-generator:
     title: IPv6 ULA generator
     description: Generate your own local, non-routable IP addresses for your network according to RFC4193.
+    article: |
+      ## IPv6 Unique Local Address (ULA)
+
+      **Unique Local Addresses (ULAs)** are IPv6 addresses in the `fc00::/7` block, defined in **RFC 4193**. They are the IPv6 counterpart to the IPv4 private address ranges (like `192.168.x.x`).
+
+      ### Properties
+      
+      *   **Globally Unique (Probabilistic)**: Because they include a 40-bit random number, collisions are extremely unlikely.
+      *   **Not Routable on the Internet**: Routers must not forward ULA packets outside the private network.
+      *   **Prefix**: Start with `fd` (strictly considering the `L` bit set to 1 for locally assigned).
+
+      ### Structure
+      
+      `{'|'} 7 bits {'|'} 1 {'|'}  40 bits   {'|'}  16 bits  {'|'}   64 bits    {'|'}`
+      `{'|'} Prefix {'|'} L {'|'} Global ID  {'|'} Subnet ID {'|'} Interface ID {'|'}`
+      `{'|'} fc00:: {'|'} 1 {'|'} (Random)   {'|'} (Custom)  {'|'}    (EUI-64)  {'|'}`
+
 
   hash-text:
     title: Hash text
     description: 'Hash a text string using the function you need : MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 or RIPEMD160'
+    article: |
+      ## Cryptographic Hash Functions
+
+      A **hash function** is a mathematical algorithm that maps data of arbitrary size to a bit array of a fixed size (the "hash value" or "digest"). Ideally, it is impossible to find two different messages with the same hash.
+
+      ### Common Algorithms
+      
+      *   **MD5** (128-bit): broken and insecure. Still used for checksums but never for security.
+      *   **SHA-1** (160-bit): Deprecated. Vulnerable to collision attacks.
+      *   **SHA-2** (SHA-256, SHA-512): The current industry standard. Widely used in TLS, Bitcoin, and much more.
+      *   **SHA-3** (Keccak): The latest member of the Secure Hash Algorithm family, released by NIST in 2015.
+
+      ### Properties
+      
+      *   **Deterministic**: The same input always results in the same output.
+      *   **Quick**: It is fast to compute the hash for any given message.
+      *   **Pre-image resistance**: It should be infeasible to generate a message from its hash.
+      *   **Avalanche effect**: A small change in input should change the output significantly.
+
 
   json-to-toml:
     title: JSON to TOML
     description: Parse and convert JSON to TOML.
+    article: |
+      ## JSON (JavaScript Object Notation)
+
+      **JSON** is a lightweight, text-based, language-independent data interchange format.
+
+      ## JSON vs TOML
+
+
+      **TOML** is increasingly popluar for configuration files because it is more readable than **JSON** and supports comments.
+
+      ### Conversion
+      
+      Converting JSON to TOML is straightforward as TOML supports the same data types (primitives, arrays, objects).
+
 
   device-information:
     title: Device information
     description: Get information about your current device (screen size, pixel-ratio, user agent, ...)
+    article: |
+      ## Device Fingerprinting
+
+      Device information is collected via the browser's `navigator` object and `window` properties.
+
+      ### Screen vs Viewport
+      
+      *   **Screen Resolution**: The physical pixels on the monitor (e.g., 1920x1080).
+      *   **Viewport**: The visible area of the browser window (CSS pixels).
+      
+      ### Pixel Ratio
+      
+      High-DPI displays (Retina) have a `devicePixelRatio` > 1, meaning one CSS pixel corresponds to multiple physical pixels.
+
 
   pdf-signature-checker:
     title: PDF signature checker
     description: Verify the signatures of a PDF file. A signed PDF file contains one or more signatures that may be used to determine whether the contents of the file have been altered since the file was signed.
+    article: |
+      ## PDF Digital Signatures
+
+      Digital signatures in PDFs allow you to verify that the document comes from a verified source and has not been tampered with.
+
+      ### How it works
+      
+      A digital signature is created using a **public key infrastructure (PKI)**.
+      
+      1.  **Signing**: A hash of the PDF content is calculated and encrypted using the signer's **private key**. This encrypted hash is embedded into the PDF.
+      2.  **Verifying**: The recipient decrypts the hash using the signer's **public key** and compares it to a new hash of the document. If they match, the document is integral.
+
+      ### PAdES Standard
+      
+      **PAdES** (PDF Advanced Electronic Signatures) is a set of restrictions and extensions to PDF and ISO 32000-1 making it suitable for advanced electronic signature.
+
 
   json-minify:
     title: JSON minify
     description: Minify and compress your JSON by removing unnecessary whitespace.
+    article: |
+      ## JSON Minification
+
+      **Minification** is the process of removing all unnecessary characters from the source code of interpreted programming languages or markup languages without changing its functionality.
+
+      ### Size Reduction
+      
+      For JSON, this typically involves removing:
+
+      *   Whitespaces (spaces, tabs)
+      *   Newlines
+
+      ### Use Case
+      
+      Minified JSON is used in network transmission to reduce payload size, saving bandwidth and improving latency.
+
 
   ulid-generator:
     title: ULID generator
     description: Generate random Universally Unique Lexicographically Sortable Identifier (ULID).
+    article: |
+      ## ULID (Universally Unique Lexicographically Sortable Identifier)
+
+      **ULID** is a unique identifier that addresses the sorting issues of UUIDs. While UUIDs are excellent for uniqueness, their randomness makes them inefficient for database indexing (fragmentation).
+
+      ### Characteristics
+      
+      *   **128-bit compatibility with UUID**: Can be stored as a UUID.
+      *   **Lexicographically Sortable**: The first 48 bits represent a timestamp (millisecond precision), allowing IDs to be sorted by creation time.
+      *   **Encoded as Crockford's Base32**: Uses a human-readable definition (0-9, A-Z excluding I, L, O, U) and is case-insensitive.
+      *   **Randomness**: The remaining 80 bits are random data.
+
+      ### Structure
+      
+      `01AN4Z07BY      79KA1307SR9X4MV3`
+      
+      `{'|'} Timestamp {'|'}  {'|'}    Randomness   {'|'}`
+      `  48 bits          80 bits`
+
 
   string-obfuscator:
     title: String obfuscator
     description: Obfuscate a string (like a secret, an IBAN, or a token) to make it shareable and identifiable without revealing its content.
+    article: |
+      ## Data Obfuscation
+
+      **Data obfuscation** (or masking) is the process of modifying sensitive data in such a way that it becomes useless to unauthorized users, but maintains its format/look for legitimate purposes (like identification or testing).
+
+      ### Techniques
+      
+      *   **Masking**: Replacing characters with symbols like `*` or `X`. Example: `****-****-****-1234` for credit cards.
+      *   **Scrambling**: Mixing the characters (more like an anagram).
+      *   **Tokenization**: Replacing the sensitive element with a non-sensitive equivalent (token) that has no extrinsic meaning.
+
+      ### Usage
+      
+      Obfuscation is critical in:
+
+      *   **Logs**: Preventing secrets (API keys, passwords) from being written to plain text logs.
+      *   **UI**: Displaying only the last 4 digits of a card or IBAN to the user.
+
 
   base-converter:
     title: Integer base converter
     description: Convert a number between different bases (decimal, hexadecimal, binary, octal, base64, ...)
+    article: |
+      ## Radix (Number Base)
+
+      The **radix** (or base) is the number of unique digits, including the digit zero, used to represent numbers in a positional numeral system.
+
+      ### Common Bases
+      
+      *   **Base 2 (Binary)**: Used by computers (`0`, `1`).
+      *   **Base 8 (Octal)**: `0-7`. Used in Unix permissions.
+      *   **Base 10 (Decimal)**: Human standard (`0-9`).
+      *   **Base 16 (Hexadecimal)**: `0-9` and `A-F`. Used for colors and memory addresses.
+
 
   yaml-to-json-converter:
     title: YAML to JSON converter
     description: Simply convert YAML to JSON with this online live converter.
+    article: |
+      ## Converting YAML to JSON
+
+      Since YAML is essentially a superset of JSON (mostly), converting from YAML to JSON is usually a straightforward process of resolving the indentation hierarchy into explicit objects and arrays.
+
+      ### Loss of Information
+      
+      *   **Comments**: Converting YAML to JSON loses all comments.
+      *   **Anchors**: YAML anchors (references) are resolved (flattened) into the values they point to.
+
 
   uuid-generator:
     title: UUIDs generator
     description: A Universally Unique Identifier (UUID) is a 128-bit number used to identify information in computer systems. The number of possible UUIDs is 16^32, which is 2^128 or about 3.4x10^38 (which is a lot!).
+    article: |
+      ## UUID (Universally Unique Identifier)
+
+      A **UUID** is a 128-bit label used for information in computer systems. The term **GUID** (Globally Unique Identifier) is also typically used.
+
+      ### Versions (RFC 4122)
+      
+      *   **Version 1 (Date-Time & MAC)**: Generated from the current time and the client MAC address. Weakness: reveals the MAC address.
+      *   **Version 3 (MD5 Name-based)**: Generated by hashing a namespace identifier and a name using MD5.
+      *   **Version 4 (Random)**: Generated using random or pseudo-random numbers. This is the **most common** version.
+      *   **Version 5 (SHA-1 Name-based)**: Similar to v3 but uses SHA-1 hashing (preferred over v3).
+
+      ### Probability of Collision
+      
+      With Version 4, the probability of finding a duplicate within 103 trillion UUIDs is one in a billion.
+      
+      `123e4567-e89b-12d3-a456-426614174000`
+
 
   ipv4-address-converter:
     title: IPv4 address converter
     description: Convert an IP address into decimal, binary, hexadecimal, or even an IPv6 representation of it.
+    article: |
+      ## IPv4 Address Formats
+
+      An **Internet Protocol version 4 (IPv4)** address is a 32-bit number that uniquely identifies a network interface on a machine.
+
+      ### Representations
+      
+      While humans typically use **dotted-decimal notation** (e.g., `192.0.2.1`), machines process it as a 32-bit integer.
+      
+      *   **Decimal**: `3221226219` (Example)
+      *   **Binary**: `11000000 00000000 00000010 00000001`
+      *   **Hexadecimal**: `0xC0000201`
+
+      ### IPv4-mapped IPv6 Address
+      
+      Hybrid dual-stack IPv6/IPv4 implementations use a special class of addresses, the IPv4-mapped IPv6 addresses.
+      
+      Example: `::ffff:192.0.2.1`
+
 
   text-statistics:
     title: Text statistics
     description: Get information about a text, the number of characters, the number of words, its size in bytes, ...
+    article: |
+      ## Text Analysis
+
+      Analyzing text metrics helps in SEO, readability scoring, and storage estimation.
+
+      ### Metrics
+      
+      *   **Characters**: Total count of glyphs.
+      *   **Words**: Typically defined by splitting strings by whitespace.
+      *   **Byte Size**: Depends on encoding. In UTF-8, common characters are 1 byte, but emojis can be 4 bytes.
+
 
   text-to-nato-alphabet:
     title: Text to NATO alphabet
     description: Transform text into the NATO phonetic alphabet for oral transmission.
+    article: |
+      ## NATO Phonetic Alphabet
+
+      The **International Radiotelephony Spelling Alphabet**, commonly known as the **NATO phonetic alphabet**, is the most widely used radiotelephone spelling alphabet.
+
+      ### Purpose
+      
+      It assigns code words acrophonically to the letters of the English alphabet, so that critical combinations of letters and numbers can be pronounced and understood by those who exchange voice messages by radio or telephone regardless of language barriers or the quality of the communication channel.
+
+      ### Examples
+      
+      *   **A**: Alpha
+      *   **B**: Bravo
+      *   **C**: Charlie
+
 
   basic-auth-generator:
     title: Basic auth generator
     description: Generate a base64 basic auth header from a username and password.
+    article: |
+      ## HTTP Basic Authentication
+
+      **Basic access authentication** is one of the simplest techniques for enforcing access controls to web resources.
+
+      ### Mechanism
+      
+      The client sends the username and password, separated by a colon (`:`), base64-encoded, in the `Authorization` header.
+      
+      `Authorization: Basic <credentials>`
+      
+      For example, if the user is `Aladdin` and password is `open sesame`:
+      1.  Construct string: `Aladdin:open sesame`
+      2.  Base64 encode: `QWxhZGRpbjpvcGVuIHNlc2FtZQ==`
+      3.  Header: `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`
+
+      **Security Note**: Since Base64 is reversible, Basic Auth provides **no confidentiality** unless used over HTTPS/TLS.
+
 
   text-to-unicode:
     title: Text to Unicode
     description: Parse and convert text to unicode and vice-versa
+    article: |
+      ## Unicode Standard
+
+      **Unicode** is an information technology standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems.
+
+      ### Code Points
+      
+      Every character is assigned a unique number, called a **code point**.
+      
+      *   `A` : `U+0041`
+      *   `π` : `U+03C0`
+      
+
+      ### Text and Encodings
+      
+      "Text" as percevied by humans is rendered from these code points. To store text, these code points are serialized into bytes using **encodings** like UTF-8 or UTF-16.
+
+      
+      *   `A`: U+0041
+      *   `€`: U+20AC
+      *   `💩`: U+1F4A9
+
+      ### Encoding (UTF-8)
+      
+      **UTF-8** is a variable-width character encoding that uses one to four bytes. It is backward compatible with ASCII and is the dominant encoding for the World Wide Web.
+
 
   ipv4-range-expander:
     title: IPv4 range expander
     description: Given a start and an end IPv4 address, this tool calculates a valid IPv4 subnet along with its CIDR notation.
+    article: |
+      ## IPv4 Address Range
+
+      An IP address range refers to a contiguous block of IP addresses. In networking, these ranges are often summarized using **CIDR notation**.
+
+      ### Start and End Addresses
+      
+      *   **Network Address**: The first address in the range, identifying the network itself.
+      *   **Broadcast Address**: The last address in the range, used to communicate with all devices on that network.
+      *   **Usable Hosts**: The addresses between network and broadcast.
+
 
   text-diff:
     title: Text diff
     description: Compare two texts and see the differences between them.
+    article: |
+      ## Diff Algorithms
+
+      A **diff** utility allows you to compare files and show the changes between them.
+
+      ### Longest Common Subsequence (LCS)
+      
+      Most diff algorithms (like the Myers algorithm used in Git) work by finding the **Longest Common Subsequence** between two sequences of lines.
+      
+      *   Lines present in A but not B are **deletions** (`-`).
+      *   Lines present in B but not A are **additions** (`+`).
+
 
   otp-generator:
     title: OTP code generator
     description: Generate and validate time-based OTP (one time password) for multi-factor authentication.
+    article: |
+      ## TOTP (Time-based One-Time Password)
+
+      **TOTP** is a computer algorithm that generates a one-time password (OTP) that uses the current time as a source of uniqueness. It is defined in **RFC 6238**. It is the cornerstone of most Two-Factor Authentication (2FA) apps like Google Authenticator or Authy.
+
+      ### Mechanism
+      
+      TOTP is essentially **HOTP** (HMAC-based One-Time Password) with a timestamp as the counter.
+      
+      `TOTP = HOTP(K, T)`
+      
+      *   **K**: Shared secret key (often encoded as Base32).
+      *   **T**: Time counter, typically `floor(current_time / 30)`. This means the code changes every 30 seconds.
+
+      ### Security
+      
+      The security relies on the secrecy of $K$. If an attacker gets the secret key (e.g., from a QR code screenshot), they can generate valid codes.
+
 
   url-encoder:
     title: Encode/decode URL-formatted strings
     description: Encode text to URL-encoded format (also known as "percent-encoded"), or decode from it.
+    article: |
+      ## Percent-encoding (URL Encoding)
+
+      **Percent-encoding** is a mechanism for encoding information in a Uniform Resource Identifier (URI) under specific circumstances.
+
+      ### Reserved Characters
+      
+      URIs include component delimiters, known as "reserved characters" (like `/`, `?`, `:`, `{'@'}`). If data needs to contain these characters without being interpreted as delimiters, they must be encoded.
+
+      ### The Mechanism
+      
+      A character is encoded using the percent character `%` followed by the two-digit hexadecimal representation of the character's ASCII value.
+      
+      *   Space ` ` becomes `%20`.
+      *   `!` becomes `%21`.
+      *   `#` becomes `%23`.
+
 
   text-to-binary:
     title: Text to ASCII binary
     description: Convert text to its ASCII binary representation and vice-versa.
+    article: |
+      ## Binary Representation
+
+      At the lowest level, all computer data is represented as a sequence of **zeros** and **ones**.
+
+      ### ASCII (American Standard Code for Information Interchange)
+      
+      ASCII is a 7-bit character set containing 128 characters.
+      
+      *   `A` (65) -> `01000001`
+      *   `a` (97) -> `01100001`
+
+      Each character typically takes up **one byte** (8 bits), with the leading bit often used for parity or extended sets.
+
+      ### Text Encoding
+      
+      Text is stored as numbers. The mapping between the character and the number is the **encoding**.
+      
+      *   **ASCII**: 7-bit, English only.
+      *   **UTF-8**: Variable width (1-4 bytes), covers almost all characters in the world.
+
+
+  safelink-decoder:
+    article: |
+      ## Safe Links (URL Rewriting)
+
+      **Safe Links** scanning protects your organization from malicious links that are used in phishing and other attacks.
+
+      ### Mechanism
+      
+      When a user clicks a link in an email, the URL is rewritten to redirect through a security gateway (e.g., `protection.outlook.com`) which checks the destination before allowing the user to proceed.
+      
+      This tool decodes the original URL from the rewritten Safe Link.
+
+  regex-tester:
+    article: |
+      ## Regular Expressions (Regex)
+
+      A **regular expression** (shortened as regex or regexp) is a sequence of characters that specifies a search pattern. Usually such patterns are used by string-searching algorithms.
+
+      ### Syntax
+      
+      *   `.`: Matches any single character.
+      *   `*`: Matches current element zero or more times.
+      *   `+`: Matches current element one or more times.
+      *   `?`: Matches current element zero or one time.
+      *   `\d`: Matches any digit.
+      *   `\w`: Matches any word character.
+  
+  regex-memo:
+    article: |
+      ## Regex Cheatsheet
+
+      Regular expressions vary slightly between engines (PCRE, JS, Python), but the core syntax is consistent.
+
+      ### Anchors
+      
+      *   `^`: Start of string (or line).
+      *   `$`: End of string (or line).
+      *   `\b`: Word boundary.
+
+  ascii-text-drawer:
+    article: |
+      ## ASCII Art
+
+      **ASCII art** is a graphic design technique that uses computers for presentation and consists of pictures pieced together from the 95 printable (from a total of 128) characters defined by the ASCII Standard from 1963.
+
+      ### Usage
+      
+      It was widely used in the 1970s and 80s on bulletin board systems (BBS) and is still popular in code comments, README files, and terminal applications.
+
+  json-to-xml:
+    article: |
+      ## JSON (JavaScript Object Notation)
+
+      **JSON** is a lightweight, text-based, language-independent data interchange format.
+
+      ## JSON vs XML
+
+
+      **XML (Extensible Markup Language)** is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
+
+      ### Comparison with JSON
+      
+      *   **Verbosity**: XML is more verbose due to closing tags.
+      *   **Attributes**: XML supports attributes (`<tag attr="val">`), whereas JSON only has key-value pairs.
+      *   **Metadata**: XML is better suited for documents with mixed content (like XHTML).
+
+  markdown-to-html:
+    article: |
+      ## Markdown
+
+      **Markdown** is a lightweight markup language for creating formatted text using a plain-text editor. John Gruber created Markdown in 2004 as a way for non-technical users to easily write content for the web.
+
+      ### Syntax
+      
+      *   `# Heading 1` -> `<h1>`
+      *   `**Bold**` -> `<strong>`
+      *   `[Link](url)` -> `<a href="url">`
+
+      ### HTML (HyperText Markup Language)
+      
+      **HTML** is the standard markup language for documents designed to be displayed in a web browser. Markdown is compiled into HTML (often using a library like `marked` or `remark`) so browsers can render it.
+
+      *   `**Bold**` -> `<strong>`
+      *   `[Link](url)` -> `<a href="url">`
+
+  email-normalizer:
+    article: |
+      ## Email Address Normalization
+
+      Email normalization is the process of ensuring that an email address is in a standard format.
+
+      ### Techniques
+      
+      *   **Lowercasing**: `User{'@'}Example.com` -> `user{'@'}example.com` (Domain is case-insensitive, local part is technically case-sensitive but usually treated as insensitive).
+      *   **Trimming**: Removing whitespace.
+      *   **Gmail Aliases**: Removing dots (`.`) and ignoring tags (`+tag`) in the local part for Gmail addresses.
+
+  xml-to-json:
+    article: |
+      ## XML to JSON Conversion
+
+      Converting XML to JSON is common when modernizing legacy systems to work with RESTful APIs.
+
+      ### Challenges
+      
+      *   **Attributes**: How to represent `<item id="1">val</item>` in JSON? often `{' {'} "id": "1", "#text": "val" {'}'}`.
+      *   **Arrays**: Is a single child element an object or an array of one item? XML schemas (XSD) are often needed for perfect conversion.
+
+
